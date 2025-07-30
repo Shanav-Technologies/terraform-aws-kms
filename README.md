@@ -21,7 +21,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/shanav-tech/terraform-aws-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/Shanav-Technologies/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
@@ -36,7 +36,7 @@ module "kms_key" {
 ## Example: kms-key-external
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/shanav-tech/terraform-aws-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/Shanav-Technologies/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
@@ -55,7 +55,7 @@ module "kms_key" {
 
 ```hcl
 module "kms_key" {
-  source                  = "git::https://github.com/shanav-tech/terraform-aws-kms.git?ref=v1.0.0"
+  source                  = "git::https://github.com/Shanav-Technologies/terraform-aws-kms.git?ref=v1.0.0"
   name                    = "kms"
   environment             = "test"
   deletion_window_in_days = 7
@@ -70,13 +70,13 @@ module "kms_key" {
 ```
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [Examples](https://github.com/shanav-tech/terraform-aws-kms/tree/master/example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Example](https://github.com/Shanav-Technologies/terraform-aws-kms/tree/master/example) directory within this repository.
 
 ## Author
-Your Name Replace **MIT** and **shanav-tech** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Your Name Replace **MIT** and **Shanav-Technologies** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/shanav-tech/terraform-aws-kms/blob/master/LICENSE) file for details.
+This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-kms/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -84,30 +84,30 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.5.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.50.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.5.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/shanav-tech/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/Shanav-Technologies/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_kms_alias.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
-| [aws_kms_external_key.external](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_external_key) | resource |
-| [aws_kms_key.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
-| [aws_kms_replica_external_key.replica_external](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_replica_external_key) | resource |
-| [aws_kms_replica_key.replica](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_replica_key) | resource |
+| [aws_kms_alias.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_alias) | resource |
+| [aws_kms_external_key.external](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_external_key) | resource |
+| [aws_kms_key.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_key) | resource |
+| [aws_kms_replica_external_key.replica_external](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_replica_external_key) | resource |
+| [aws_kms_replica_key.replica](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/kms_replica_key) | resource |
 
 ## Inputs
 
@@ -130,7 +130,7 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 | <a name="input_key_usage"></a> [key\_usage](#input\_key\_usage) | Specifies the intended use of the key. Defaults to ENCRYPT\_DECRYPT, and only symmetric encryption and decryption are supported. | `string` | `"ENCRYPT_DECRYPT"` | no |
 | <a name="input_kms_key_enabled"></a> [kms\_key\_enabled](#input\_kms\_key\_enabled) | Specifies whether the kms is enabled or disabled. | `bool` | `true` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | n/a | `string` | `"shanav-tech"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | n/a | `string` | `"Shanav-Technologies"` | no |
 | <a name="input_multi_region"></a> [multi\_region](#input\_multi\_region) | Indicates whether the KMS key is a multi-Region (true) or regional (false) key. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_origin"></a> [origin](#input\_origin) | KMS key origin (AWS\_KMS or EXTERNAL) | `string` | `"AWS_KMS"` | no |

@@ -30,7 +30,7 @@ variable "attributes" {
 
 variable "managedby" {
   type        = string
-  default     = "shanav-tech"
+  default     = "Shanav-Technologies"
   description = ""
 }
 
